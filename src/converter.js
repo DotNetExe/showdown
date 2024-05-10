@@ -332,6 +332,7 @@ showdown.Converter = function (converterOptions) {
     text = showdown.subParser('makehtml.blockGamut')(text, options, globals);
     text = showdown.subParser('makehtml.unhashHTMLSpans')(text, options, globals);
     text = showdown.subParser('makehtml.unescapeSpecialChars')(text, options, globals);
+    text = showdown.subParser('makehtml.highlightWord')(text, options, globals);
 
     // attacklab: Restore dollar signs
     text = text.replace(/¨D/g, '$$');
